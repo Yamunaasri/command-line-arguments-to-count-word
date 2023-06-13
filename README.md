@@ -20,7 +20,7 @@ Print the number of words
 
 
 ## PROGRAM:
-
+```
 '''
 Program to count the number of words in a file
 Developed by: T S Yamunaasri
@@ -34,7 +34,7 @@ with open(fp,'r') as f:
   words+=len(word)
   print("Number of words:",words)
   
-  
+ ``` 
 ### OUTPUT:
 ![Screenshot 2023-06-13 161635](https://github.com/Yamunaasri/command-line-arguments-to-count-word/assets/115707860/6cd747b7-e127-4c14-8a73-554899002485)
 
