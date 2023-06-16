@@ -26,20 +26,23 @@ Program to count the number of words in a file
 Developed by: T S Yamunaasri
 Register Number: 21222240117
 '''
-fp=input("Enter the file name:")
-words=0
-with open(fp,'r') as f:
- for line in f:
-  word=line.split()
-  words+=len(word)
-  print("Number of words:",words)
-  
+import sys
+count = {}
+with open(sys.argv[1], 'r') as f:
+    for line in f:
+        for word in line.split():
+            if word not in count:
+                count[word] = 1
+            else:
+                count[word] += 1
+print(count)
+f.close()
  ``` 
 ### OUTPUT:
-![Screenshot 2023-06-13 161635](https://github.com/Yamunaasri/command-line-arguments-to-count-word/assets/115707860/6cd747b7-e127-4c14-8a73-554899002485)
+![244279709-07302a96-9557-4806-8236-4381000c3715](https://github.com/Yamunaasri/command-line-arguments-to-count-word/assets/115707860/60313b57-aa71-499d-a2dd-a41fb91f9f22)
 
 
-![Screenshot 2023-06-13 161641](https://github.com/Yamunaasri/command-line-arguments-to-count-word/assets/115707860/fd53e542-1786-48fa-822b-6f27b51c6964)
+![244279728-24d5bb6b-e206-4cd3-ba56-97b7837aa52e](https://github.com/Yamunaasri/command-line-arguments-to-count-word/assets/115707860/c018a526-0dd0-4d0c-94d6-b2806121fa71)
 
 
 
